@@ -6,8 +6,13 @@ using VendorTracker.Models;
 namespace VendorTracker.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
+
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
@@ -36,6 +41,15 @@ namespace VendorTracker.Tests
     public void GetVendors_ReturnsEmptyList_VendorList()
     {
       List<Vendor> newList = new List<Vendor> {};
+      List<Vendor> result = Vendor.GetVendors();
+      CollectionAssert.AreEqual(newList, result);
+    }
+    [TestMethod]
+    public void GetVendors_ReturnsVendorList_VendorList()
+    {
+      Vendor newVendor = new Vendor("Suzie's Cafe");
+      Vendor newVendor2 = new Vendor("Barry's");
+      List<Vendor> newList = new List<Vendor> {newVendor, newVendor2};
       List<Vendor> result = Vendor.GetVendors();
       CollectionAssert.AreEqual(newList, result);
     }
