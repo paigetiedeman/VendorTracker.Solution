@@ -24,11 +24,11 @@ namespace VendorTracker.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpPost("/vendor/{id}")]
-    public ActionResult Show(int id)
-    {
-      Vendor selectedVendor = Vendor.Find(id);
-      return View(selectedVendor);
-    }
+    // [HttpPost("/vendor/{id}")]
+    // public ActionResult Show(int id)
+    // {
+    //   Vendor selectedVendor = Vendor.Find(id);
+    //   return View(selectedVendor);
+    // }
   }
 }
