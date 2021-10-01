@@ -57,6 +57,13 @@ namespace VendorTracker.Tests
       List<Vendor> result = Vendor.GetVendors();
       CollectionAssert.AreEqual(newList, result);
     }
-    
+
+    [TestMethod]
+    public void Vendor_ConstructorAssignsId_True()
+    {
+      string vendorName = "Suzie's Cafe";
+      Vendor newVendor = new Vendor(vendorName);
+      Assert.AreEqual(0, newVendor.Id);
+    }
   }
 }
