@@ -65,5 +65,14 @@ namespace VendorTracker.Tests
       Vendor newVendor = new Vendor(vendorName);
       Assert.AreEqual(0, newVendor.Id);
     }
+    [TestMethod]
+    public void Vendor_ConstructorAssignsIds_True()
+    {
+      string vendorName = "Suzie's Cafe";
+      string vendorName2 = "Barry's";
+      Vendor newVendor = new Vendor(vendorName);
+      Vendor newVendor2 = new Vendor(vendorName2);
+      Assert.AreEqual(1, newVendor2.Id);
+    }
   }
 }
