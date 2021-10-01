@@ -91,5 +91,15 @@ namespace VendorTracker.Tests
       Order newOrder = new Order(title, description, price, date);
       Assert.AreEqual(0, newOrder.Id);
     }
+    [TestMethod]
+    public void FindOrder_ReturnsCorrectOrderById_Order()
+    {
+      string title = "Suzie's Cafe";
+      string title2 = "Barry's";
+      Order newOrder = new Order(title, "description test", "price test", "date test");
+      Order newOrder2 = new Order(title2, "description test", "price test", "date test");
+      Order result = Order.FindOrder(2);
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 }
