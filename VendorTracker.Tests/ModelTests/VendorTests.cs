@@ -19,6 +19,7 @@ namespace VendorTracker.Tests
       Vendor newVendor = new Vendor("test");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
+
     [TestMethod]
     public void GetVendorName_ReturnsVendorName_String()
     {
@@ -27,6 +28,7 @@ namespace VendorTracker.Tests
       string result = newVendor.VendorName;
       Assert.AreEqual(vendorName, result);
     }
+
     [TestMethod]
     public void SetVendorName_SetsVendorName_String()
     {
@@ -37,6 +39,7 @@ namespace VendorTracker.Tests
       string result = newVendor.VendorName;
       Assert.AreEqual(vendorName2, result);
     }
+
     [TestMethod]
     public void GetVendors_ReturnsEmptyList_VendorList()
     {
@@ -44,6 +47,7 @@ namespace VendorTracker.Tests
       List<Vendor> result = Vendor.GetVendors();
       CollectionAssert.AreEqual(newList, result);
     }
+
     [TestMethod]
     public void GetVendors_ReturnsVendorList_VendorList()
     {
@@ -53,5 +57,6 @@ namespace VendorTracker.Tests
       List<Vendor> result = Vendor.GetVendors();
       CollectionAssert.AreEqual(newList, result);
     }
+    
   }
 }

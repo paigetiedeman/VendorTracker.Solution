@@ -6,8 +6,13 @@ using VendorTracker.Models;
 namespace VendorTracker.Tests
 {
   [TestClass]
-  public class OrderTests
+  public class OrderTests : IDisposable
   {
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
+
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
@@ -22,6 +27,7 @@ namespace VendorTracker.Tests
       string result = newOrder.Title;
       Assert.AreEqual(title, result);
     }
+
     [TestMethod]
     public void GetSetDescription_ReturnsOrderDescription_String()
     {
@@ -31,6 +37,7 @@ namespace VendorTracker.Tests
       string newDescription = newOrder.Description;
       Assert.AreEqual(description, newDescription);
     }
+
     [TestMethod]
     public void GetSetPrice_ReturnsOrderPrice_String()
     {
@@ -41,6 +48,7 @@ namespace VendorTracker.Tests
       string newPrice = newOrder.Price;
       Assert.AreEqual(price, newPrice);
     }
+
     [TestMethod]
     public void GetSetDate_ReturnsOrderDate_String()
     {
@@ -52,6 +60,7 @@ namespace VendorTracker.Tests
       string newDate = newOrder.Date;
       Assert.AreEqual(date, newDate);
     }
+    
     [TestMethod]
     public void GetOrders_ReturnsEmptyList_OrderList()
     {

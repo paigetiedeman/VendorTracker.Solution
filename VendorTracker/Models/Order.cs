@@ -22,5 +22,9 @@ namespace VendorTracker.Models
     {
       return _orderInstances;
     }
+    public static void ClearAll()
+    {
+      _orderInstances.Clear();
+    }
   }
 }
