@@ -2,9 +2,9 @@
 [![Language][languageH-shield]][languageH-url]
 [![MIT License][license-shield]][license-url]
 
-# Project Name
+# Pierre's Bakery Vendor and Order Tracker
 
-#### This is a C# web application ...
+#### This is a C# MVC web application to track vendors purchase orders.
 
 #### _By Paige Tiedeman_
 
@@ -17,7 +17,7 @@
 
 ## Description
 
-This web application takes users inputs of items and places them in a UL list using RESTful routing.
+This web application takes users inputs of orders and places them in a UL list using RESTful routing. "Vendors" can place orders that have clickable links to take you to each order that will have more information about that order.
 
 ## Installation Requirements
 
