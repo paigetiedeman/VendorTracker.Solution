@@ -32,5 +32,12 @@ namespace VendorTracker.Tests
       string result = newVendor.VendorName;
       Assert.AreEqual(vendorName2, result);
     }
+    [TestMethod]
+    public void GetVendors_ReturnsEmptyList_VendorList()
+    {
+      List<Vendor> newList = new List<Vendor> {};
+      List<Vendor> result = Vendor.GetVendors();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
