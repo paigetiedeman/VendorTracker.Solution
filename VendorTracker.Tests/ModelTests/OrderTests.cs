@@ -81,5 +81,15 @@ namespace VendorTracker.Tests
       List<Order> resultList = Order.GetList();
       CollectionAssert.AreEqual(newList, resultList);
     }
+    [TestMethod]
+    public void Order_ConstructorAssignsId_True()
+    {
+      string title = "Order 1";
+      string description = "1 Pastry";
+      string price = "5";
+      string date = "Oct. 1";
+      Order newOrder = new Order(title, description, price, date);
+      Assert.AreEqual(0, newOrder.Id);
+    }
   }
 }
