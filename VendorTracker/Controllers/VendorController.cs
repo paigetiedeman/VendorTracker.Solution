@@ -23,5 +23,12 @@ namespace VendorTracker.Controllers
       Vendor newVendor = new Vendor (vendorName);
       return RedirectToAction("Index");
     }
+
+    [HttpPost("/vendor/{id}")]
+    public ActionResult Show(int id)
+    {
+      Vendor selectedVendor = Vendor.Find(id);
+      return View(selectedVendor);
+    }
   }
 }
