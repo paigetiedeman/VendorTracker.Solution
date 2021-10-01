@@ -8,11 +8,11 @@ namespace VendorTracker.Tests
   [TestClass]
   public class OrderTests
   {
-    [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
-    {
+    // [TestMethod]
+    // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    // {
       
-      Assert.AreEqual();
-    }
+      
+    // }
   }
 }

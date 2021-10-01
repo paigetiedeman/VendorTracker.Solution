@@ -9,10 +9,10 @@ namespace VendorTracker.Tests
   public class VendorTests
   {
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      
-      Assert.AreEqual();
+      Vendor newVendor = new Vendor();
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
   }
 }
