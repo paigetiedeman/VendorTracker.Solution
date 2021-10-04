@@ -98,8 +98,9 @@ namespace VendorTracker.Tests
       string title2 = "Barry's";
       Order newOrder = new Order(title, "description test", "price test", "date test");
       Order newOrder2 = new Order(title2, "description test", "price test", "date test");
-      Order result = Order.FindOrder(2);
+      Order result = Order.Find(1);
       Assert.AreEqual(newOrder2, result);
     }
+
   }
 }

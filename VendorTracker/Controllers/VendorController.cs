@@ -42,25 +42,11 @@ namespace VendorTracker.Controllers
       Vendor selectedVendor = Vendor.Find(vendorId);
       Order newOrder = new Order(title, description, price, date);
       selectedVendor.AddOrder(newOrder);
-      List<Order> orderItems = Order.GetList();
+      List<Order> orderItems = selectedVendor.Orders;
       Dictionary<string, object> model = new Dictionary<string, object>();
       model.Add("order", orderItems);
       model.Add("vendor", selectedVendor);
       return View("Show", model);
     }
-
-    [HttpPost("/vendor/{vendorId}/order/{orderId}")]
-    public ActionResult Show(int vendorId, int orderId)
-    {
-      Vendor vendor = Vendor.Find(vendorId);
-      Order order = Order.FindOrder(orderId);
-      Dictionary<string, object> model = new Dictionary<string, object>();
-      Vendor selectedVendor = Vendor.Find(vendorId);
-      List<Order> orderItems = Order.GetList();
-      model.Add("vendor", vendor);
-      model.Add("order", order);
-      return View(model);
-    }
-
   }
 }

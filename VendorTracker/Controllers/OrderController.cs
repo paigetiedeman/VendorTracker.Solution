@@ -16,7 +16,7 @@ namespace VendorTracker.Controllers
     [HttpGet("/vendor/{vendorId}/order/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
     {
-      Order newOrder = Order.FindOrder(orderId);
+      Order newOrder = Order.Find(orderId);
       Vendor newVendor = Vendor.Find(vendorId);
       Dictionary<string, object> model = new Dictionary<string, object>();
       model.Add("order", newOrder);

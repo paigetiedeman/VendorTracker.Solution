@@ -3,10 +3,9 @@
 @{
   Layout = "_Layout";
 }
-
-<h2>Order Details for your Vendor:</h2>
-
-<h4>Order for @Model["vendor"].VendorName</h4>
+<div class="jumbotron">
+  <h2>Order for @Model["vendor"].VendorName</h2>
+</div>
 
 <ul>
 @foreach (Order orders in @Model["order"])
@@ -17,4 +16,4 @@
 
 
 <a href="/vendor" class="btn btn-dark">Return to Vendor List</a>
-<a href='/vendor/@Model["vendor"].Id/order/new'>Input a New Order</a>
+<a href='/vendor/@Model["vendor"].Id/order/new' class="btn btn-dark">Input a New Order</a>

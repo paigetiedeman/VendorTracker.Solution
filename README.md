@@ -17,7 +17,7 @@
 
 ## Description
 
-This web application takes users inputs of orders and places them in a UL list using RESTful routing. "Vendors" can place orders that have clickable links to take you to each order that will have more information about that order.
+This web application takes users inputs of orders and places them in a UL list using RESTful routing. Pierre can update Vendors and orders that have clickable links to take you to each order with more information about that order.
 
 ## Installation Requirements
 
@@ -31,11 +31,13 @@ This web application takes users inputs of orders and places them in a UL list u
 
 
 ## Steps To Use
-* _In your terminal navigate into ProjectName.Solution/ProjectName_
+* _In your terminal navigate into VendorTracker.Solution/VendorTracker_
 * _Run `$ dotnet build` to build the site_
 * _Run `$ dotnet run` to start the live server_
 * _Click either button to add or see the list_
-* _After clicking add item put in your inputs and hit submit to reveal the list!_
+* _After clicking add a vendor put in your inputs and hit submit to reveal the list of vendors!_
+* _Click on a vendor to input an order and then fill out those inputs_
+* _After clicking Add Order Details you can click the order to view details_
 
 ## Known Bugs
 

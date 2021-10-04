@@ -81,8 +81,13 @@ namespace VendorTracker.Tests
       string vendorName2 = "Barry's";
       Vendor newVendor = new Vendor(vendorName);
       Vendor newVendor2 = new Vendor(vendorName2);
-      Vendor result = Vendor.Find(2);
+      Vendor result = Vendor.Find(1);
       Assert.AreEqual(newVendor2, result);
+    }
+    [TestMethod]
+    public void AddOrder_AssociatesVendorWithOrder_VendorList()
+    {
+      
     }
   }
 }
