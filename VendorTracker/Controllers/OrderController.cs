@@ -6,11 +6,11 @@ namespace VendorTracker.Controllers
 {
   public class OrderController : Controller
   {
-    [HttpGet("/vendor/{id}/order/new")]
-    public ActionResult New(int id)
+    [HttpGet("/vendor/{vendorId}/order/new")]
+    public ActionResult New(int vendorId)
     {
-      Vendor selectedVendor = Vendor.Find(id);
-      return View(selectedVendor);
+      Vendor newVendor = Vendor.Find(vendorId);
+      return View(newVendor);
     }
     // [HttpPost("/order/{id}")]
     // public ActionResult Show(int id)

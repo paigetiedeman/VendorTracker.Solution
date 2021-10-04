@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+<h2>Fill out Order Details</h2>
+
+<div class="form-group">
+  <form action="/vendor/@Model.Id/order" method="post">
+    <input id="vendorId" type="hidden" value="@Model.Id">
+    <label for="title"class="form-label"></label>Order Title:</label>
+    <input id="title" type="text" name="title" placeholder="Refil Order" class="form-control">
+    <label for="description"class="form-label">Description: </label>
+    <input id="description" type="text" name="description" placeholder="One Pastry" class="form-control">
+    <label for="price"class="form-label">Price: </label>
+    <input id="price" type="number" name="price" placeholder="2" class="form-control" min="1">
+    <label for="date"class="form-label">Date Ordered: </label>
+    <input id="date" type="date" name="date" placeholder="mm/dd/yyyy" class="form-control">
+    <br>
+    <button type="submit" class="btn btn-dark">Add Order Details!</button>
+  </form>
+</div>

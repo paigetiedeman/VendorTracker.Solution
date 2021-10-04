@@ -4,3 +4,13 @@
   Layout = "_Layout";
 }
 
+<h2>Orders:</h2>
+
+<ul>
+  <li>@Model["order"].Title</li>
+  <li>@Model["order"].Description</li>
+  <li>$@Model["order"].Price</li>
+  <li>Ordered: @Model["order"].Date</li>
+</ul>
+
+<a href="/vendor" class="btn btn-dark">Back to Vendor List</a>
