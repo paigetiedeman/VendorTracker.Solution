@@ -12,9 +12,16 @@ namespace VendorTracker.Controllers
       Vendor newVendor = Vendor.Find(vendorId);
       return View(newVendor);
     }
-    // [HttpPost("/order/{id}")]
-    // public ActionResult Show(int id)
-    // {
-    // }
+    
+    [HttpGet("/vendor/{vendorId}/order/{orderId}")]
+    public ActionResult Show(int vendorId, int orderId)
+    {
+      Order newOrder = Order.FindOrder(orderId);
+      Vendor newVendor = Vendor.Find(vendorId);
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      model.Add("order", newOrder);
+      model.Add("vendor", newVendor);
+      return View(model);
+    }
   }
 }

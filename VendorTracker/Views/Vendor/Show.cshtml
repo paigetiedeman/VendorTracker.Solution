@@ -8,14 +8,13 @@
 
 <h4>Order for @Model["vendor"].VendorName</h4>
 
-@* <ul>
+<ul>
 @foreach (Order orders in @Model["order"])
 {
-  <li>@orders.Title</li>
-  <li>@orders.Description</li>
-  <li>@orders.Price</li>
-  <li>@orders.Date</li>
+  <li><a href='/vendor/@Model["vendor"].Id/order/@orders.Id'>@orders.Title</a></li>
 }
-</ul> *@
+</ul> 
+
 
 <a href="/vendor" class="btn btn-dark">Return to Vendor List</a>
+<a href='/vendor/@Model["vendor"].Id/order/new'>Input a New Order</a>
